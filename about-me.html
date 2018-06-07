@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+		<title>Good spot</title>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway:100,200,600,700" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="page-wrap">
+            <section id="main">
+
+                <header>
+                        <ul>
+                            <a href=index.html id="header-link"><h2>main</h2></a>
+                            <a href="arts.html" id="header-link"><h2>art</h2></a>
+                            <a href="barlife.html" id="header-link"><h2>bar</h2></a>
+                            <a href="urban.html" id="header-link"><h2>urban</h2></a>
+                            <a href="boats.html" id="header-link"><h2>boats</h2></a>
+                            <a href="about-me.html" id="header-link"><h2>contact</h2></a>
+                        </ul>
+                    </header>
+
+                <section id="header-light">
+                    <img src="images/logo/logoBlogBlackMini.png" alt="Logo"> 
+                    <h1>hey! thanks for visit</h1>
+                    </div>
+                </section>
+
+                <section class="quote">
+                    <div class="quote">
+                        <h3>About Me:</h3>
+                        <h3>All of the photos are my property.<br>This collection has been shoot in random moments with random equipement.<br>
+                            Ain't no photographer, but I got plenty of photos.<br>
+                            If you wish to conntact me, use bellow form please.</h3>
+                        <h5><br>Bart</h5>
+                        
+                    </div>
+                </section>
+                              
+                <script type="text/javascript">
+
+                    function isEmailAddress(str) {
+                      var text = str.value;
+                      var pattern = "^[^@\s]+@[^@\s]+\.[^@\s]+$";
+                      var testResult = text.match(pattern);
+                      
+                      return testResult;    
+                    }
+                
+                    function validateEmail() { 
+                      var isValidationOver = false;
+                
+                      var email = document.ContactForm.email;
+                      var fname = document.ContactForm.fname;
+                      var subject = document.ContactForm.subject;
+                
+                      if (fname.value == "") {
+                        window.alert("Please enter your name.");
+                      } else if (subject.value == "") {
+                        window.alert("Enter message.");
+                      } else if (isEmailAddress(email) == null) {
+                        window.alert("invalid adres");
+                      } else {
+                        window.alert("Probably valid")
+                      }
+                    }
+                  </script>
+                
+                    
+                <section class="contact">
+                        <div class="container-form">
+                            <form name="ContactForm" onsubmit="validateEmail();" myFunction(this);>
+                                <label for="email">email</label>
+                                <input type="text" id="email" name="email" placeholder="Enter your email.."></textarea>
+                            
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            
+                                <label for="subject">Subject</label>
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                            
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                </section>
+        </div>
+    </body>
